@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -7,7 +8,91 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  max-width: 1000px;
+  min-width: 355px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+
+.youtube-viewer {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.youtube-video {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 2px 2px 1rem #000;
+}
+
+.youtube-sidebar {
+  list-style: none;
+  height: 20rem;
+  overflow: scroll;
+  overflow-x: hidden; 
+}
+
+.youtube-sidebar-video {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px #999 solid;
+  border-radius: .2rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 1rem #000;
+}
+
+.youtube-sidebar-video:hover {
+  background-color: #99999924;
+}
+
+.youtube-sidebar-video-info {
+  margin-left: 1rem;
+}
+
+.youtube-sidebar-video-thumbnail {
+  height: 100%;
+  width: 100%;
+  max-height: 6rem;
+  max-width: 6rem;
+}
+
+.youtube-sidebar-video-title {
+  margin-bottom: 0;
+}
+
+.youtube-sidebar-video-channel {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .youtube-video {
+    width: 100%;
+  }
+  
+  .youtube-viewer {
+    flex-direction: column
+  }
+
+  .youtube-sidebar {
+    padding-left: 0;
+    margin-left: 0;
+    height: auto;
+  }
 }
