@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Search for youtube videos depending on where you are on the map. Created using React, React-Router, and Redux. Uses [Youtube's Data API](https://developers.google.com/youtube/v3/) and [Google's Maps API](https://developers.google.com/maps/documentation/javascript/tutorial).
+> Search for youtube videos depending on where you are on the map. Created using React and Redux. Uses [Youtube's Data API](https://developers.google.com/youtube/v3/) and [Google's Maps API](https://developers.google.com/maps/documentation/javascript/tutorial).
 
 [Demo App](https://youtube-map.netlify.com/)
 
