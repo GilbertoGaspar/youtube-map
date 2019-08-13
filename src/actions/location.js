@@ -17,16 +17,19 @@ const addLocation = (location, videos) => {
 
 export const handleAddLocation = (location) => {
     return (dispatch) => {
-        const API_KEY = '[YOUR_API_KEY]'
+        const API_KEY = '[YOUR_API_KEY'
         const { lat, lng } = location
         dispatch(showLoading())
         axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&location=${lat}%2C${lng}&locationRadius=10mi&maxResults=6&order=date&type=video&key=${API_KEY}`)
             .then(({ data }) => {
                 dispatch(addLocation(location, data.items))
-                dispatch(addSelectedVideo(data.items[0].id.videoId))
+                if(data.items.length !== 0) {
+                    dispatch(addSelectedVideo(data.items[0].id.videoId))
+                }
                 dispatch(hideLoading())
             })
-            .catch(() => {
+            .catch((error) => {
+                console.log(error)
                 var modal = new tingle.modal({
                     footer: false,
                     stickyFooter: false,
