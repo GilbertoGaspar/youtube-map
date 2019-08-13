@@ -29,7 +29,7 @@ export const handleAddLocation = (location) => {
                 dispatch(hideLoading())
             })
             .catch((error) => {
-                console.log(error)
+                console.error(error)
                 var modal = new tingle.modal({
                     footer: false,
                     stickyFooter: false,
